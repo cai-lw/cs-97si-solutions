@@ -1,8 +1,6 @@
 # Selected POJ solutions and analyses for CS97SI
 
-Current progress:
-
-[Assignment 2 Solutions and Analyses](https://cai-lw.github.io/cs97si-solutions/assn2)
+[List of Solutions](https://cai-lw.github.io/cs97si-solutions/)
 
 ## About CS97SI
 
@@ -26,6 +24,6 @@ I also upload my own solution codes to this repo, but don't expect high-quality 
 
 ## Contribution
 
-I can only invest very limited time to this repo. If you are interested in providing POJ solutions (or CS97SI solutions) in English, just write your own solutions or translate from existing Chinese solutions, and create a pull request.
+If you have any question about the solution or the code, feel free to create an issue.
 
-My English skill is also limited. If you are a native speaker or have high proficiency in English, you can contribute by correcting the grammar or improving the writing style.
+I can only invest very limited time to this repo. If you are interested in providing POJ solutions (or CS97SI solutions) in English, just write your own solutions or translate from existing Chinese solutions, and create a pull request.

@@ -5,5 +5,8 @@ title: CS97SI Solutions List
 
 # List of Solutions
 
-[Assignment 2: Mathematics](assn2) Solved: 10/12, Written: 8/12
-[Assignment 8: Network Flow Problems](assn8) Solved: 7/12, Written: 3/12
+| Solution                                     | Progress | Code                                                         | Progress |
+| -------------------------------------------- | -------- | ------------------------------------------------------------ | -------- |
+| [Assignment 2: Mathematics](assn2)           | 10/12    | [assn2](https://github.com/cai-lw/cs97si-solutions/tree/master/assn2) | 10/12    |
+| [Assignment 8: Network Flow Problems](assn8) | 4/12     | [assn8](https://github.com/cai-lw/cs97si-solutions/tree/master/assn8) | 7/12     |
+
