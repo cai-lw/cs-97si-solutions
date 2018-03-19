@@ -49,7 +49,7 @@ The `lowbit` function can be efficiently computed as `lowbit(x)=x&(-x)`. It is u
 
 A simple observation is that we only need to consider circles that has at least two points on its border (imaging moving the circle around). Simply checking all these circles against all points ($O(n^3)$) is enough for passing the test.
 
-We can use vector math to find the center of the circle (solving quadratic equations also works but seems cumbersome). Let $\textbf{v}_m=(x_m,y_m)=(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2})$ be the midpoint of two points, and $\textbf{v}_h=(x_h,y_h)=(y_1-y_2,x_2-x_1)$ be the vector between two points rotated by 90 degree, then $\textbf{v}_c=(x_c,y_c)=\textbf{v}_m+\textbf{v}_h\frac{\sqrt{R^2-||\textbf{v}_h||^2}}{||\textbf{v}_h||}$
+We can use vector math to find the center of the circle (solving quadratic equations also works but seems cumbersome). Let $\textbf{v}_m=(x_m,y_m)=(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2})$ be the midpoint of two points, and $\textbf{v}_h=(x_h,y_h)=(y_1-y_2,x_2-x_1)$ be the vector between two points rotated by 90 degree, then $\textbf{v}_c=(x_c,y_c)=\textbf{v}_m+\textbf{v}_h\frac{\sqrt{R^2-\lVert\textbf{v}_h\rVert^2/4}}{\lVert\textbf{v}_h\rVert}$
 
 ## 2084 Game of Connections (4)
 
