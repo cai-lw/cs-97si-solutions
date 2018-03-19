@@ -1,4 +1,5 @@
 ---
+layout: math
 title: "Assignment 2: Mathematics"
 ---
 
@@ -49,7 +50,9 @@ The `lowbit` function can be efficiently computed as `lowbit(x)=x&(-x)`. It is u
 
 ## 2084 Game of Connections (4)
 
+Cut the circle open between point 1 and point 2n and pull it into a straight line. Because connections between 2n points on the line don't intersect, every arrangement of connection uniquely corresponds to a **valid bracket sequence of length 2n**. We can count such sequences using DP: `dp[i][j]=dp[i-1][j-1]+dp[i-1][j+1]`, where `dp[i][j]` means there are `j` left brackets in excess when the sequence length is `i`, and `dp[2*n][0]` gives the answer.
 
+As the hint in CS97SI says, the number is too large for any fixed-sized integer types, so we must implement big integers if we are using languages that doesn't natively support them (such as C and C++). In this question we only need big integer addition, which is relatively easy.
 
 ## 2085 Inversion (5)
 
