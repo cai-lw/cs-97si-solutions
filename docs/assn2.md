@@ -55,7 +55,7 @@ We can use vector math to find the center of the circle (solving quadratic equat
 
 Cut the circle open between point 1 and point 2n and pull it into a straight line. Because connections between 2n points on the line don't intersect, every arrangement of connection uniquely maps to (i.e. bijection) a **valid bracket sequence of length 2n**: the left end of a connection is the left bracket, and vice versa. We can count bracket sequences using DP: `dp[i][j]=dp[i-1][j-1]+dp[i-1][j+1]`, where `dp[i][j]` means there are `j` left brackets in excess when the sequence length is `i`, and `dp[2*n][0]` gives the answer.
 
-As the hint in CS97SI says, the number is too large for any fixed-sized integer types, so we must implement big integers if we are using languages that don't natively support them (such as C and C++). In this question we only need big integer addition, which is relatively easy to implemement. Just think about how you do large number addition on paper, and translate the process into code.
+As the hint in CS 97SI says, the number is too large for any fixed-sized integer types, so we must implement big integers if we are using languages that don't natively support them (such as C and C++). In this question we only need big integer addition, which is relatively easy to implemement. Just think about how you do large number addition on paper, and translate the process into code.
 
 ## 2085 Inversion (5)
 
@@ -70,7 +70,7 @@ We can come up with the following algorithm. Suppose that at some time we have $
 
 Let $L$ be the number of digits of $m$. The problem says $L\leq100$, but it turns out that for $1\leq n\leq200$ we can always find $m$ within the range of 64-bit integer, or $L\leq18$. Therefore, a brute force search with complexity $O(2^L)$ is enough for an AC.
 
-A better approach resembles the backpack problem and runs in $O(nL)$. Let $\{10^i, 0\leq i \leq n\}$ be "items" and the backpack "wraps" by modulo $n$. The DP equation is `dp[i][j]=dp[i-1][j] || dp[i-1][(j-10^i)%n]`, where `dp[i][j]` means whether there is a `i`-digit `0-1` number that equals to `j` modulo `n`. We also need to keep track of the previous state of each state to recover $m$ when we find a solution.
+A better approach resembles the backpack problem and runs in $O(nL)$. Let $\lbrace 10^i, 0\leq i \leq n\rbrace$ be "items" and the backpack "wraps" by modulo $n$. The DP equation is `dp[i][j]=dp[i-1][j] || dp[i-1][(j-10^i)%n]`, where `dp[i][j]` means whether there is a `i`-digit `0-1` number that equals to `j` modulo `n`. We also need to keep track of the previous state of each state to recover $m$ when we find a solution.
 
 ## 2356 Find a Multiple (7, challenge problem)
 

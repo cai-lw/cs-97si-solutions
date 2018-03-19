@@ -9,7 +9,7 @@ title: "Assignment 8: Network Flow Problems"
 
 I recommend using [Dinic's Algorithm](https://en.wikipedia.org/wiki/Dinic's_algorithm) whenever possible. It has decent performance ($O(V^2E)$ on general network, $O(\min\lbrace V^{2/3}E,E^{3/2}\rbrace)$ on unit capacity network) and simple implementation. Reference implementations can be found at [here (Chinese blog)](http://blog.csdn.net/STILLxjy/article/details/52039069) (I use this one) and [here (GeeksforGeeks)](https://www.geeksforgeeks.org/dinics-algorithm-maximum-flow/).
 
-The most difficult part of solving a network flow problem is **to recognize that it is a network flow problem**, but CS97SI has eliminated this step for us! The second most difficult part is to construct the graph, and our solutions are mostly about that. The algorithm part is undoubtfully the easiest -- just write one and copy-paste everywhere!
+The most difficult part of solving a network flow problem is **to recognize that it is a network flow problem**, but CS 97SI has eliminated this step for us! The second most difficult part is to construct the graph, and our solutions are mostly about that. The algorithm part is undoubtfully the easiest -- just write one and copy-paste everywhere!
 
 ## 1273 Drainage Ditches (1) 
 
