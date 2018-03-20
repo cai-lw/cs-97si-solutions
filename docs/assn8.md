@@ -31,4 +31,4 @@ To find whether such match exists given $d$, connect the source to all $C$ cows 
 
 We need [Kőnig's theorem](https://en.wikipedia.org/wiki/K%C3%B6nig%27s_theorem_(graph_theory)) for solving this problem, which is very important but not always covered by network flow tutorials. The theorem says that the size of the minimal vertex cover (a set of vertices that all edges connects to some of them) of a bipartite graph equals to the size of its maximal matching.
 
-After having this theorem, the solution is straightforward. Create $N$ nodes for each row and $N$ nodes for each column, and connect nodes for row $i$ adn column $j$ for every asteroid at $(i,j)$, then find the size of the minimal vertex cover of the graph.
+After having this theorem, the solution is straightforward. Create $N$ nodes for each row and $N$ nodes for each column, and connect nodes for row $i$ and column $j$ for every asteroid at $(i,j)$, then find the size of the minimal vertex cover of the graph.

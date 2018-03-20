@@ -70,7 +70,7 @@ We can come up with the following algorithm. Suppose that at some time we have $
 
 Let $L$ be the number of digits of $m$. The problem says $L\leq100$, but it turns out that for $1\leq n\leq200$ we can always find $m$ within the range of 64-bit integer, or $L\leq18$. Therefore, a brute force search with complexity $O(2^L)$ is enough for an AC.
 
-A better approach resembles the backpack problem and runs in $O(nL)$. Let $\lbrace 10^i, 0\leq i \leq n\rbrace$ be "items" and the backpack "wraps" by modulo $n$. The DP equation is `dp[i][j]=dp[i-1][j] || dp[i-1][(j-10^i)%n]`, where `dp[i][j]` means whether there is a `i`-digit `0-1` number that equals to `j` modulo `n`. We also need to keep track of the previous state of each state to recover $m$ when we find a solution.
+A better approach resembles the backpack problem and runs in $O(nL)$. Let $\lbrace 10^i, 0\leq i < L\rbrace$ be "items" and the backpack "wraps" by modulo $n$. The DP equation is `dp[i][j]=dp[i-1][j]||dp[i-1][(j-10^i)%n]`, where `dp[i][j]` means whether there is a `i`-digit `0-1` number that equals to `j` modulo `n`. We also need to keep track of the previous state of each state to recover $m$ when we find a solution.
 
 ## 2356 Find a Multiple (7, challenge problem)
 

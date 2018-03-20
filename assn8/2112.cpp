@@ -63,7 +63,6 @@ public:
         edge_ids[v].push_back(edges.size() - 1);
     }
     int max_flow() {
-        int n = edge_ids.size();
         int ret = 0;
         while (bfs()) {
             fill(ptr.begin(), ptr.end(), 0);
