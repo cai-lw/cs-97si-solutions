@@ -10,7 +10,7 @@ public:
     void all_one() {
         for (int i = 1; i < a.size(); i++) a[i] = i & (-i);
     }
-    void change(int i, int d) {
+    void add(int i, int d) {
         while (i < a.size()) {
             a[i] += d;
             i += i & (-i);
@@ -68,7 +68,7 @@ int main() {
         int x;
         scanf(" %c %d", &op, &x);
         if (op == 'C') {
-            tr.change(left[x], apple[x] ? -1 : 1);
+            tr.add(left[x], apple[x] ? -1 : 1);
             apple[x] = !apple[x];
         }
         else printf("%d\n", tr.sum(right[x]) - tr.sum(left[x] - 1));
