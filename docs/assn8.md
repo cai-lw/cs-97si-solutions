@@ -38,3 +38,21 @@ After having this theorem, the solution is straightforward. Create $N$ nodes for
 This time, we need the max-flow min-cut theorem.
 
 Similar to the previous problem, we can immediately make a bipartite graph, but then what? This time we let $s\rightarrow i$ have capacity $\log r_i$, $j\rightarrow t$ have capacity $\log c_j$, and $i\rightarrow j$ have infinite capacity. A cut on the network with finite cut cost obviously only cuts $s\rightarrow i$ and $j\rightarrow t$. If we find such a cut, and install laser guns in rows and columns corresponding to cut edges, all paratroopers can be killed, because all $i\rightarrow j$ edges have at least one side cut (otherwise $s$ and $t$ is connected), and the cut cost equals to the logarithm of the total cost of installing laser guns. Hence, finding the minimal cut (= maximal flow) in this network and exponentiating it gives the answer.
+
+## 2195 Going Home (6) 
+
+## 2516 Minimum Cost (7) 
+
+## 2455 Secret Milking Machine (7) 
+
+## 2226 Muddy Fields (7) 
+
+(Solved)
+
+## 3281 Dining (7) 
+
+(Solved)
+
+## 2391 Ombrophobic Bovines (8, challenge problem) 
+
+## 3498 March of the Penguins (8, challenge problem) 
