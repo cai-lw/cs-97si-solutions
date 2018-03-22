@@ -43,7 +43,9 @@ Similar to the previous problem, we can immediately make a bipartite graph, but 
 
 ## 2516 Minimum Cost (7) 
 
-## 2455 Secret Milking Machine (7) 
+## 2455 Secret Milking Machine (7)
+
+(Solved)
 
 ## 2226 Muddy Fields (7) 
 
@@ -53,6 +55,8 @@ Similar to the previous problem, we can immediately make a bipartite graph, but 
 
 (Solved)
 
-## 2391 Ombrophobic Bovines (8, challenge problem) 
+## 2391 Ombrophobic Bovines (8, challenge problem)
+
+(Solved)
 
 ## 3498 March of the Penguins (8, challenge problem) 
