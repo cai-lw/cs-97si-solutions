@@ -33,7 +33,11 @@ title: "Assignment 4: Dynamic Programming (DP)"
 
 ## 1655 Balancing Act (6) 
 
+(Solved)
+
 ## 2292 Optimal Keypad (6) 
+
+(Solved)
 
 ## 2430 Lazy Cows (7) 
 
