@@ -41,7 +41,11 @@ Similar to the previous problem, we can immediately make a bipartite graph, but 
 
 ## 2195 Going Home (6) 
 
+(Solved)
+
 ## 2516 Minimum Cost (7) 
+
+(Solved)
 
 ## 2455 Secret Milking Machine (7)
 
@@ -59,4 +63,6 @@ Similar to the previous problem, we can immediately make a bipartite graph, but 
 
 (Solved)
 
-## 3498 March of the Penguins (8, challenge problem) 
+## 3498 March of the Penguins (8, challenge problem)
+
+(Solved)
