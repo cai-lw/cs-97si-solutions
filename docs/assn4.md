@@ -7,7 +7,7 @@ title: "Assignment 4: Dynamic Programming (DP)"
 
 ## 2663 Tri Tiling (1) 
 
-(Solved)
+Covered in lecture slides.
 
 ## 1163 The Triangle (1) 
 
@@ -23,7 +23,7 @@ title: "Assignment 4: Dynamic Programming (DP)"
 
 ## 1159 Palindrome (3) 
 
-(Solved)
+Covered in lecture slides.
 
 ## 1050 To the Max (4) 
 
