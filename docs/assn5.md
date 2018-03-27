@@ -1,6 +1,6 @@
 ---
 layout: math
-title: "Assignment 5: Combinatorial Games "
+title: "Assignment 5: Combinatorial Games"
 ---
 
 # Assignment 5: Combinatorial Games 

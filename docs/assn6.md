@@ -1,6 +1,6 @@
 ---
 layout: math
-title: "Assignment 6: Basic Graph Algorithms 
+title: "Assignment 6: Basic Graph Algorithms"
 ---
 
 # Assignment 6: Basic Graph Algorithms 
@@ -42,5 +42,7 @@ Recall that Kruskal's algorithm tries to add edges in the order of their weights
 ## 2337 Catenyms (7) 
 
 ## 2186 Popular Cows (8, challenge problem) 
+
+(Solved)
 
 ## 1944 Fiber Communications (8, challenge problem)
