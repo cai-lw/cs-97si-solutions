@@ -23,6 +23,8 @@ Simply do a DP on all reachable numbers from the largest down to 1, to find whet
 
 ## 1678 I Love this Game! (3) 
 
+(Solved)
+
 ## 1704 Georgia and Bob (5) 
 
 ## 2960 S-Nim (5) 
@@ -43,7 +45,9 @@ As a single move cannot go through a TP, we only need to consider states of TPs.
 
 Each TP corresponds to a step in Euclid's greatest common divisor (GCD) algorithm, hence the name of the problem. All TPs, distances, and winning/losing states can be found with this algorithm in $O(\log n)$.
 
-## 1143 Number Game (7) 
+## 1143 Number Game (7)
+
+(Solved)
 
 ## 3317 Stake Your Claim (7) 
 
