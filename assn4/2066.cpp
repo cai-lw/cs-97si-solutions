@@ -18,7 +18,7 @@ bool chord[100][100];
 
 ll cross(Point a, Point b, Point c) {
     ll ux = a.x - b.x, uy = a.y - b.y,
-      vx = a.x - c.x, vy = a.y - c.y;
+        vx = a.x - c.x, vy = a.y - c.y;
     return ux * vy - uy * vx;
 }
 
@@ -29,16 +29,16 @@ ll area2(Point a, Point b, Point c) {
 
 ll dot(Point a, Point b, Point c) {
     ll ux = a.x - b.x, uy = a.y - b.y,
-      vx = a.x - c.x, vy = a.y - c.y;
+        vx = a.x - c.x, vy = a.y - c.y;
     return ux * vx + uy * vy;
 }
 
 int rayxseg(Point a, Point b, Point c, Point d) {
     ll x1 = cross(a, b, c), x2 = cross(a, d, b);
-    if (x1 == 0) return (dot(a, b, c) > 0 || x2 == 0 && dot(a, b, d) > 0) ? 0 : -1;
-    if (x2 == 0) return dot(a, b, d) > 0 ? 0 : -1;
+    if (x1 == 0) return (dot(a, b, c) >= 0 || x2 == 0 && dot(a, b, d) >= 0) ? 0 : -1;
+    if (x2 == 0) return dot(a, b, d) >= 0 ? 0 : -1;
     ll x3 = cross(a, d, c);
-    return (x1 > 0 && x2 > 0 && x3 > 0) || (x1 < 0 && x2 < 0 && x3 < 0) ? 1 : -1;
+    return (x1 > 0 && x2 > 0 && x3 >= 0) || (x1 < 0 && x2 < 0 && x3 <= 0) ? 1 : -1;
 }
 
 int linexseg(Point a, Point b, Point c, Point d) {
@@ -82,7 +82,7 @@ int main() {
                 if (ok) {
                     while (true) {
                         Point pr(rand() % 20003, rand() % 20003),
-                              pc(vtx[i].x + vtx[j].x, vtx[i].y + vtx[j].y);
+                                pc(vtx[i].x + vtx[j].x, vtx[i].y + vtx[j].y);
                         if (pr.x == pc.x && pr.y == pc.y) continue;
                         int cnt = 0;
                         for (int k = 0; k < n; k++) {
