@@ -41,6 +41,8 @@ Covered in lecture slides.
 
 ## 2430 Lazy Cows (7) 
 
-## 2066 Minimax Triangulation (8, challenge problem) 
+## 2066 Minimax Triangulation (8, challenge problem)
+
+(Solved)
 
 ## 1038 Bugs Integrated, Inc. (9, challenge problem) 
