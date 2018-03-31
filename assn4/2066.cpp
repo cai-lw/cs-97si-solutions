@@ -11,10 +11,10 @@ struct Point {
     Point(ll x, ll y): x(x), y(y) {}
 };
 
-Point vtx[100];
-ll dp[50][100];
+Point vtx[50];
+ll dp[50][50];
 int n;
-bool chord[100][100];
+bool chord[50][50];
 
 ll cross(Point a, Point b, Point c) {
     ll ux = a.x - b.x, uy = a.y - b.y,
@@ -66,15 +66,15 @@ int main() {
             scanf("%d %d", &xx, &yy);
             Point p(xx, yy);
             vtx[i] = p;
-            vtx[i + n] = p;
         }
-        for (int i = 0; i < n * 2 - 1; i++) chord[i][i+1] = true;
+        for (int i = 0; i < n - 1; i++) chord[i][i+1] = true;
         for (int i = 0; i < n; i++)
             for (int j = i + 2; j < (i == 0 ? n-1 : n); j++) {
                 bool ok = true;
                 for (int k = 0; k < n; k++) {
-                    if (k == (i == 0 ? n-1 : i-1) || k == i || k == j-1 || k == j) continue;
-                    if (segxseg(vtx[i], vtx[j], vtx[k], vtx[k+1])) {
+                    int knext = k == n-1 ? 0 : k+1;
+                    if (k == i || knext == i || k == j || knext == j) continue;
+                    if (segxseg(vtx[i], vtx[j], vtx[k], vtx[knext])) {
                         ok = false;
                         break;
                     }
@@ -86,8 +86,9 @@ int main() {
                         if (pr.x == pc.x && pr.y == pc.y) continue;
                         int cnt = 0;
                         for (int k = 0; k < n; k++) {
+                            int knext = k == n-1 ? 0 : k+1;
                             Point p1(vtx[k].x * 2, vtx[k].y * 2),
-                                    p2(vtx[k+1].x * 2, vtx[k+1].y * 2);
+                                    p2(vtx[knext].x * 2, vtx[knext].y * 2);
                             int r = rayxseg(pc, pr, p1, p2);
                             if (r == 0) {
                                 cnt = -1;
@@ -101,12 +102,10 @@ int main() {
                     }
                 }
                 chord[i][j] = ok;
-                chord[j][i + n] = ok;
-                chord[i + n][j + n] = ok;
             }
-        for (int i = 0; i < n * 2; i++) dp[1][i] = 0;
+        for (int i = 0; i < n; i++) dp[1][i] = 0;
         for (int i = 2; i < n; i++)
-            for (int j = 0; j < n; j++) {
+            for (int j = 0; j < n - i; j++) {
                 dp[i][j] = 0x7FFFFFFF;
                 for (int k = 1; k < i; k++)
                     if (chord[j][j+k] && chord[j+k][j+i])

@@ -19,6 +19,8 @@ title: "Assignment 7: Shortest Path Algorithms"
 
 ## 3169 Layout (4) 
 
+(Solved)
+
 ## 2253 Frogger (4)
 
 (Solved)
@@ -27,7 +29,11 @@ title: "Assignment 7: Shortest Path Algorithms"
 
 ## 1556 The Doors (5)
 
+(Solved)
+
 ## 2502 Subway (6)
+
+(Solved)
 
 ## 1344 Tree Size Problem (6)
 
