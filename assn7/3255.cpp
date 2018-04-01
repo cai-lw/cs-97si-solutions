@@ -1,7 +1,6 @@
 #include <cstdio>
 #include <vector>
 #include <queue>
-#include <functional>
 #include <algorithm>
 using namespace std;
 
