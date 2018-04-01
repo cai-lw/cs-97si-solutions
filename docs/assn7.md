@@ -27,6 +27,8 @@ title: "Assignment 7: Shortest Path Algorithms"
 
 ## 3255 Roadblocks (5)
 
+(Solved)
+
 ## 1556 The Doors (5)
 
 (Solved)
