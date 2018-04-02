@@ -15,6 +15,8 @@ $$
 
 ## 1401 Factorial (1)
 
+(Same as [Leetcode 172: Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes))
+
 Number of trailing 0's equals to 5's power in $n!$'s factorization. We are counting how many 10's we can divide from $n!$, and $10=2\times5$, and $n!$ apparently has much more 2's than 5's, so the number of 5's is the bottleneck. The answer is 
 
 $$

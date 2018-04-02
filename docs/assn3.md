@@ -62,7 +62,9 @@ Do a DFS to find the traversal sequence, as well as the interval for each subtre
 
 ## 1175 Picture (7, challenge problem) 
 
-## 1195 Mobile phones (8, challenge problem) 
+## 1195 Mobile phones (8, challenge problem)
+
+(Same as [Leetcode 302: Range Sum Query 2D - Mutable](https://leetcode.com/problems/range-sum-query-2d-mutable), subscribers only)
 
 Obviously we need the two-dimensional version of Fenwick tree. The extension is straightforward and intuitive, so I just post my code here without further explanation. The complexity for both operations are $O(\log^2S)$.
 
