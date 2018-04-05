@@ -11,6 +11,8 @@ title: "Assignment 9: Computational Geometry"
 
 ## 2653 Pick-up sticks (2)
 
+(Solved)
+
 ## 2318 TOYS (3)
 
 (Solved)
@@ -20,6 +22,8 @@ title: "Assignment 9: Computational Geometry"
 (Solved)
 
 ## 1696 Space Ant (4)
+
+(Solved)
 
 ## 2540 Hotter Colder (5)
 
