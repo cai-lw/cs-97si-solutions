@@ -29,6 +29,8 @@ title: "Assignment 9: Computational Geometry"
 
 ## 1228 Grandpa's Estate (6)
 
+(Solved)
+
 ## 1408 Fishnet (7)
 
 ## 1584 A Round Peg in a Ground Hole (7)
