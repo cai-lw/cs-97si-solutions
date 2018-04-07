@@ -27,6 +27,8 @@ title: "Assignment 9: Computational Geometry"
 
 ## 2540 Hotter Colder (5)
 
+(Solved)
+
 ## 1228 Grandpa's Estate (6)
 
 (Solved)
@@ -36,6 +38,8 @@ title: "Assignment 9: Computational Geometry"
 ## 1584 A Round Peg in a Ground Hole (7)
 
 ## 3525 Most Distant Point from the Sea (8, challenge problem)
+
+(Solved)
 
 ## 3246 Game (9, challenge problem)
 
