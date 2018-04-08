@@ -5,9 +5,11 @@ title: "Assignment 9: Computational Geometry"
 
 # Assignment 9: Computational Geometry
 
+**WARNING:** Many problems in this assignment don't use special judge to handle floating point error. Therefore, it can be very tricky to get your code accepted even if your algorithm is correct. Theoretically, arbitrarily small error can lead to wrong answer. Practically, you should always compute the result as accurate as possible, regardless of the accuracy requirement.
+
 ## 1905 Expanding Rods
 
-**WARNING:** You must handle floating point error very carefully in this problem. It is very likely to get WA even if the algorithm is correct. Compute the answer as accurate as possible, treat corner cases specially, and good luck.
+(Solved)
 
 ## 2653 Pick-up sticks (2)
 
@@ -34,6 +36,8 @@ title: "Assignment 9: Computational Geometry"
 (Solved)
 
 ## 1408 Fishnet (7)
+
+(Solved)
 
 ## 1584 A Round Peg in a Ground Hole (7)
 

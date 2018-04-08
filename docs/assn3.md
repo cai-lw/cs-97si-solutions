@@ -25,7 +25,7 @@ If you don't know how to build an expression tree, see [expression tree on Wikip
 
 ## 1984 Navigation Nightmare (5) 
 
-We first ignore queries and build the whole tree, then use DFS to find the coordinate of all nodes. A node's coordinate is determined by its parent's coordinate and the direction and length of the edge between them.
+We first ignore queries and build the whole tree, then use DFS to find the coordinate of all nodes. A node's coordinate is determined by its parent's coordinate and the direction and length of the edge between them, which can be computed recursively.
 
 Now we process queries in time order. Add edges one by one and use union-find sets to keep track of connectivity. If two nodes are not connected (belong to different sets) then output -1, otherwise output their distance.
 
