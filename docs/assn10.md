@@ -9,7 +9,15 @@ title: "Assignment 10: String Algorithms"
 
 (Same as [Leetcode 392: Is Subsequence](https://leetcode.com/problems/is-subsequence/))
 
-(Solved)
+Let $dp(i)$ be the maximum length of prefix of $s$ that is a substring of $t$'s $i$-character prefix.
+
+$$
+dp(i)=
+\begin{cases}
+dp(i-1),&t_i \neq s_{dp(i-1)+1}\\
+dp(i-1)+1,&t_i = s_{dp(i-1)+1}\\
+\end{cases}
+$$
 
 ## 2408 Anagram Groups (2)
 
@@ -20,6 +28,8 @@ Trivial [Josephus Problem](https://en.wikipedia.org/wiki/Josephus_problem#The_ge
 ## 1750 Dictionary (3)
 
 ## 2752 Seek the Name, Seek the Fame (4)
+
+(Solved)
 
 ## 1961 Period (5)
 

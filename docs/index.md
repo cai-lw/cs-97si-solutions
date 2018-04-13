@@ -16,5 +16,5 @@ title: List of Solutions and Codes
 | [Assignment 7: Shortest Path Algorithms](assn7) | 4/12     | [assn7](https://github.com/cai-lw/cs-97si-solutions/tree/master/assn7)   | 9/12      |
 | [Assignment 8: Network Flow Problems](assn8)    | 6/12     | [assn8](https://github.com/cai-lw/cs-97si-solutions/tree/master/assn8)   | **12/12** |
 | [Assignment 9: Computational Geometry](assn9)   | 0/12     | [assn9](https://github.com/cai-lw/cs-97si-solutions/tree/master/assn9)   | 9/12      |
-| [Assignment 10: String Algorithms](assn10)      | 2/12     | [assn10](https://github.com/cai-lw/cs-97si-solutions/tree/master/assn10) | 4/12      |
+| [Assignment 10: String Algorithms](assn10)      | 3/12     | [assn10](https://github.com/cai-lw/cs-97si-solutions/tree/master/assn10) | 5/12      |
 
