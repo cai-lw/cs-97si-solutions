@@ -1,6 +1,7 @@
-#include <iostream>
+#include <cstdio>
 #include <vector>
 #include <string>
+#include <set>
 #include <algorithm>
 using namespace std;
 
@@ -11,12 +12,11 @@ struct LEntry {
     }
 };
 
-int p[30][200011], sa[200011], step, n;
-LEntry l[200011];
-string s;
+int p[30][20000], sa[20000], cp[20000], s[20000], step, n, k;
+LEntry l[20000];
 
 void suffix_array() {
-    for(int i=0;i<n;i++)p[0][i]=int(s[i]);
+    for(int i=0;i<n;i++)p[0][i]=s[i];
     for(int cnt=1;cnt<n;cnt*=2) {
         step++;
         for(int i=0;i<n;i++){
@@ -45,19 +45,20 @@ int lcp(int x, int y) {
 }
 
 int main() {
-    string A, B;
-    cin >> A;
-    cin >> B;
-    s = A + '#' + B;
-    n = s.length();
+    scanf("%d %d", &n, &k);
+    for(int i = 0; i < n; i++) scanf("%d", &s[i]);
     step = 0;
     suffix_array();
-    for(int i=0;i<n;i++)sa[p[step][i]]=i;
-    int ans=0, last_A=-1, last_B=-1;
-    for(int i=0;i<n-1;i++){
-        if (sa[i] == A.length() || sa[i+1] == A.length()) continue;
-        if ((sa[i] < A.length()) ^ (sa[i+1] < A.length()))
-            ans = max(ans, lcp(sa[i], sa[i+1]));
+    for(int i = 0; i < n; i++)sa[p[step][i]] = i;
+    multiset<int> cps;
+    int ans = 0;
+    for(int i = 0; i < n - 1; i++){
+        cp[i] = lcp(sa[i], sa[i+1]);
+        cps.insert(cp[i]);
+        if(cps.size() == k-1){
+            ans = max(ans, *cps.begin());
+            cps.erase(cps.find(cp[i-k+2]));
+        }
     }
-    cout << ans << endl;
+    printf("%d\n", ans);
 }
