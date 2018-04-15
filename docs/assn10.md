@@ -39,9 +39,13 @@ Trivial [Josephus Problem](https://en.wikipedia.org/wiki/Josephus_problem#The_ge
 
 ## 3261 Milk Patterns (6)
 
+(Solved)
+
 ## 2185 Milking Grid (7)
 
 ## 3349 Snowflake Snow Snowflakes (7)
+
+(Solved)
 
 ## 3167 Cow Patterns (8, challenge problem)
 
