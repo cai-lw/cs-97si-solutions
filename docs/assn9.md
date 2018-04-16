@@ -7,7 +7,7 @@ title: "Assignment 9: Computational Geometry"
 
 **WARNING:** Many problems in this assignment don't use special judge to handle floating point error. Therefore, it can be very tricky to get your code accepted even if your algorithm is correct. Theoretically, arbitrarily small error can lead to wrong answer. Practically, you should always compute the result as accurate as possible, regardless of the accuracy requirement.
 
-## 1905 Expanding Rods
+## 1905 Expanding Rods (1)
 
 (Solved)
 

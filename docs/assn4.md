@@ -17,7 +17,9 @@ Covered in lecture slides.
 
 (Solved)
 
-## 2033 Alphacode (2) 
+## 2033 Alphacode (2)
+
+(Same as [Leetcode 91: Decode Ways](https://leetcode.com/problems/decode-ways/))
 
 (Solved)
 

@@ -21,11 +21,15 @@ $$
 
 ## 2408 Anagram Groups (2)
 
+(Solved)
+
 ## 2359 Questions (3)
 
 Trivial [Josephus Problem](https://en.wikipedia.org/wiki/Josephus_problem#The_general_case). See the Wikipedia page if you don't know how to solve it quickly.
 
 ## 1750 Dictionary (3)
+
+(Solved)
 
 ## 2752 Seek the Name, Seek the Fame (4)
 

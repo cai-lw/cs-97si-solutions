@@ -15,15 +15,15 @@ The problem itself is boring, but you should learn how to check EOF and set outp
 
 ## 1003 Hangover (1)
 
-(Solved)
+Just do what it tells you to do.
 
 ## 1007 DNA Sorting (2)
 
-(Solved)
+For each string, you can simply compare all pairs of characters in $O(n^2)$, or keep tracs of how many A's, C's, G's and T's there are before each character, and count inversions in $O(n)$. Both are acceptable for this problem.
 
 ## 2136 Vertical Histogram (2)
 
-(Solved)
+Beware that you cannot print any spaces after the last `*` in a row. One way to achieve this is only printing spaces before printing a `*`. You will need to know where the previous `*` is and how many space between them you should print.
 
 ## 2140 Herd Sums (3)
 
@@ -39,7 +39,11 @@ The problem itself is boring, but you should learn how to check EOF and set outp
 
 ## 1001 Exponentiation (5)
 
+(Solved)
+
 ## 1922 Ride to School (5)
+
+(Solved)
 
 ## 3251 Big Square (6, challenge problem)
 
