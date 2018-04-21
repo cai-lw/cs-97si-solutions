@@ -14,8 +14,8 @@ Let $dp(i)$ be the maximum length of prefix of $s$ that is a substring of $t$'s 
 $$
 dp(i)=
 \begin{cases}
-dp(i-1),&t_i \neq s_{dp(i-1)+1}\\
-dp(i-1)+1,&t_i = s_{dp(i-1)+1}\\
+dp(i-1) &t_i \neq s_{dp(i-1)+1}\\
+dp(i-1)+1 &t_i = s_{dp(i-1)+1}\\
 \end{cases}
 $$
 
