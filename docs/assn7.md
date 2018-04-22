@@ -62,3 +62,5 @@ We first split evey undirected edge into two directed edges. This is okay becaus
 ## 2135 Farm Tour (7)
 
 ## 2404 Jogging Trails (9, challenge problem)
+
+(Solved)

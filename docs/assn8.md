@@ -43,30 +43,30 @@ Similar to the previous problem, we can immediately make a bipartite graph, but 
 
 ## 2195 Going Home (6) 
 
-Note that nothing can block the man, so the distance between a house and a man is just their Manhattan distance.
+Note that nothing can block the man, so the distance between a house and a man is just their Manhattan distance. Don't do any BFS or Dijkstra on the map.
 
 Connect each man to each house with capacity 1 and cost equal to their distance, and connect source to men and houses to sink with capacity 1 and cost 0, then find the min-cost max-flow.
 
 ## 2516 Minimum Cost (7) 
 
-(Solved)
+Straighforward min-cost max-flow. Different kinds of goods are totally independent, so find min-cost max-flow on $k$ networks and sum up the answer.
 
 ## 2455 Secret Milking Machine (7)
 
-(Solved)
+Use the same binary search idea as 2112. Beware of multiple edges between the same pair of nodes.
 
 ## 2226 Muddy Fields (7) 
 
-(Solved)
+We only need to consider boards that cover a maximal consecutive segment of muddy patches. Each muddy patch can be covered by exactly two such boards, one horizontal and one vertical. By mapping boards to nodes and muddy patches to edges, it becomes a minimal vertex cover problem, almost identical to 3041.
 
 ## 3281 Dining (7) 
 
-(Solved)
+Split each cow into two nodes $cow_i^1, cow_i^2$. Connect dishes to $cow^1$, drinks to $cow^2$, and $cow^1_i$ to $cow^2_i$, all with unit capacity. Each path like $s \rightarrow dish_i \rightarrow cow_i^1 \rightarrow cow_i^2 \rightarrow drink_i \rightarrow t$ corresponds to a fed cow, so just find the maximum flow.
 
 ## 2391 Ombrophobic Bovines (8, challenge problem)
 
-(Solved)
+Almost the same as 2112, just with a larger input, requiring an efficient implementation.
 
 ## 3498 March of the Penguins (8, challenge problem)
 
-(Solved)
+For the $i$-th floe, create an "in" node $u_i$ and an "out" node $v_i$, an edge from $s$ to $u_i$ with capacity $n_i$, and an edge from $u_i$ to $v_i$ with capacity $m_i$. If one can jump from floe $i$ to floe $j$, create an edge from $v_i$ to $u_j$ with infinite capacity. If we want to know whether it's possible to gather all penguins at the $k$-th floe, create an edge from $u_k$ to $t$ with infinite capacity, and see whether the maximum flow equals to the total number of penguins. We need to do this $N$ times, requiring a very efficient implementation.

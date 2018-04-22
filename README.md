@@ -2,6 +2,8 @@
 
 [List of Solutions](https://cai-lw.github.io/cs-97si-solutions/)
 
+[My POJ account (cai_lw)](poj.org/userstatus?user_id=cai_lw)
+
 ## About CS 97SI
 
 [CS 97SI: Introduction to Programming Contests](http://web.stanford.edu/class/cs97si/), provided by Stanford, is one of the most recommended courses in competitive programming. Released resources are concise lecture slides and list of categorized and graded practice problems, which are all on POJ.
