@@ -41,6 +41,8 @@ title: "Assignment 9: Computational Geometry"
 
 ## 1584 A Round Peg in a Ground Hole (7)
 
+(Solved)
+
 ## 3525 Most Distant Point from the Sea (8, challenge problem)
 
 (Solved)

@@ -72,11 +72,13 @@ We can come up with the following algorithm. Suppose that at some time we have $
 
 Let $L$ be the number of digits of $m$. The problem says $L\leq100$, but it turns out that for $1\leq n\leq200$ we can always find $m$ within the range of 64-bit integer, or $L\leq18$. Therefore, a brute force search with complexity $O(2^L)$ is enough for an AC.
 
-A better approach resembles the backpack problem and runs in $O(nL)$. Let $\lbrace 10^i, 0\leq i < L\rbrace$ be "items" and the backpack "wraps" by modulo $n$. The DP equation is `dp[i][j]=dp[i-1][j]||dp[i-1][(j-10^i)%n]`, where `dp[i][j]` means whether there is a `i`-digit `0-1` number that equals to `j` modulo `n`. We also need to keep track of the previous state of each state to recover $m$ when we find a solution.
+A better approach resembles the knapsack problem and runs in $O(nL)$. Let $\lbrace 10^i, 0\leq i < L\rbrace$ be "items" and the backpack "wraps" by modulo $n$. The DP equation is `dp[i][j]=dp[i-1][j]||dp[i-1][(j-10^i)%n]`, where `dp[i][j]` means whether there is a `i`-digit `0-1` number that equals to `j` modulo `n`. We also need to keep track of the previous state of each state to recover $m$ when we find a solution.
 
 ## 2356 Find a Multiple (7, challenge problem)
 
+It's tempting to tackle this problem like a knapsack problem, but it would be $O(n^2)$ which is too slow. Using some common math tricks we can find a solution in $O(n)$.
 
+Let $r_i=(a_1+a_2+\dots +a_i)\%N$. If $r_i=0$ for some $i$ then we've found a solution. Otherwise, all $\{r_i|i=1,2,\dots,N\}$ are integers between $1$ and $N-1$ (inclusive). There are $N$ numbers but they only have at most $N-1$ distinct values, so by [pigeonhole principle](https://en.wikipedia.org/wiki/Pigeonhole_principle) there must be $r_i=r_j$ for some $1\leq i<j\leq N$, and $(a_{i+1}+a_{i+2}+\dots +a_j)\%N=r_j-r_i=0$ is a solution.
 
 ## 1148 Utopia Divided (9, challenge problem)
 
