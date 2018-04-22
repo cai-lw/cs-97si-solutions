@@ -78,7 +78,7 @@ A better approach resembles the knapsack problem and runs in $O(nL)$. Let $\lbra
 
 It's tempting to tackle this problem like a knapsack problem, but it would be $O(n^2)$ which is too slow. Using some common math tricks we can find a solution in $O(n)$.
 
-Let $r_i=(a_1+a_2+\dots +a_i)\%N$. If $r_i=0$ for some $i$ then we've found a solution. Otherwise, all $\{r_i|i=1,2,\dots,N\}$ are integers between $1$ and $N-1$ (inclusive). There are $N$ numbers but they only have at most $N-1$ distinct values, so by [pigeonhole principle](https://en.wikipedia.org/wiki/Pigeonhole_principle) there must be $r_i=r_j$ for some $1\leq i<j\leq N$, and $(a_{i+1}+a_{i+2}+\dots +a_j)\%N=r_j-r_i=0$ is a solution.
+Let $r_i=(a_1+a_2+\dots +a_i)\%N$. If $r_i=0$ for some $i$ then we've found a solution. Otherwise, all $r_i$'s $(i=1,2,\dots,N)$ are integers between $1$ and $N-1$ (inclusive). There are $N$ numbers but they only have at most $N-1$ distinct values, so by [pigeonhole principle](https://en.wikipedia.org/wiki/Pigeonhole_principle) there must be $r_i=r_j$ for some $1\leq i < j\leq N$, and $(a_{i+1}+a_{i+2}+\dots +a_j)\%N=r_j-r_i=0$ is a solution.
 
 ## 1148 Utopia Divided (9, challenge problem)
 
