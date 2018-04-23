@@ -2,7 +2,7 @@
 
 [List of Solutions](https://cai-lw.github.io/cs-97si-solutions/)
 
-[My POJ account (cai_lw)](poj.org/userstatus?user_id=cai_lw)
+[My POJ account (cai_lw)](http://poj.org/userstatus?user_id=cai_lw)
 
 ## About CS 97SI
 

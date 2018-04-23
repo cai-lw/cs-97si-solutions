@@ -101,4 +101,19 @@ public:
 };
 ```
 
-## 2750 Potted Flower (9, challenge problem) 
+## 2750 Potted Flower (9, challenge problem)
+
+To avoid handling wrap-around intervals, notice that the sum of a wrap-around interval $[a,n]\cup[1,b]$ can be expressed as $S(1,n)-S(b+1,a-1)$, where $S(x,y)$ is the sum of a non-wrap-around interval $[x,y]$. Therefore, the maximum sum of wrap-around intervals equals to $S(1,n)$ minus the minimum sum of non-wrap-around intervals.
+
+To find the answer, we need a data structure that can efficiently find the maximum and minimum interval sum of a mutable array. We use a segment tree which maintains 4 values on each node. Their definitions and update rules are summarized below. 
+
+| Definition                                    | Update rule                                         |
+| --------------------------------------------- | --------------------------------------------------- |
+| $s(l,r)=S(l,r)$                               | $s(l,r)=s(l,m)+s(m',r)$                             |
+| $ls(l,r)=\max_{l \leq b \leq r} S(l,b)$       | $ls(l,r)=\max\{ls(l,m), s(l,m)+ls(m',r) \}$         |
+| $rs(l,r)=\max_{l \leq a \leq r} S(a,r)$       | $rs(l,r)=\max\{rs(m',r), s(m',r)+ls(l,m) \}$        |
+| $ms(l,r)=\max_{l\leq a \leq b \leq r} S(a,b)$ | $ms(l,r)=\max\{ms(l,m),ms(m',r),rs(l,m)+ls(m',r)\}$ |
+
+Same as other segment trees, single element update can be done in $O(\log n)$, and the maximum interval sum is just $ms(1,n)$ which can be read in $O(1)$. Finding the minimum interval sum is very similar, but the easiest way (requires least coding) is to instantiate another identical segment tree, just with all data negated.
+
+Finally, beware that it's not allowed to use the whole array as an interval. This happens if and only if when all elements are positive, and then the answer will be $S(1,n)$ minus the smallest element. It's easy to check and answer this special case in an additional $O(1)$ time per query.
