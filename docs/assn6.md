@@ -52,7 +52,7 @@ $$
 P(u)=
 \begin{cases}
 L(u) &|C(u)|\leq 1\\
-\max_{v_1, v_2\in C(u), v_1 \neq v_2}\lbrace w(u,v_1)+L(v_1)+w(u,v_2)+L(v_2) \rbrace &|C(u)|\geq 2\\
+\max_{v_1, v_2\in C(u), v_1 \neq v_2} w(u,v_1)+L(v_1)+w(u,v_2)+L(v_2) &|C(u)|\geq 2\\
 \end{cases}
 $$
 

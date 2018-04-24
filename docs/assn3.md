@@ -107,12 +107,12 @@ To avoid handling wrap-around intervals, notice that the sum of a wrap-around in
 
 To find the answer, we need a data structure that can efficiently find the maximum and minimum interval sum of a mutable array. We use a segment tree which maintains 4 values on each node. Their definitions and update rules are summarized below. 
 
-| Definition                                    | Update rule                                         |
-| --------------------------------------------- | --------------------------------------------------- |
-| $s(l,r)=S(l,r)$                               | $s(l,r)=s(l,m)+s(m',r)$                             |
-| $ls(l,r)=\max_{l \leq b \leq r} S(l,b)$       | $ls(l,r)=\max\{ls(l,m), s(l,m)+ls(m',r) \}$         |
-| $rs(l,r)=\max_{l \leq a \leq r} S(a,r)$       | $rs(l,r)=\max\{rs(m',r), s(m',r)+ls(l,m) \}$        |
-| $ms(l,r)=\max_{l\leq a \leq b \leq r} S(a,b)$ | $ms(l,r)=\max\{ms(l,m),ms(m',r),rs(l,m)+ls(m',r)\}$ |
+| Definition                                    | Update rule                                                     |
+| --------------------------------------------- | --------------------------------------------------------------- |
+| $s(l,r)=S(l,r)$                               | $s(l,r)=s(l,m)+s(m',r)$                                         |
+| $ls(l,r)=\max_{l \leq b \leq r} S(l,b)$       | $ls(l,r)=\max\lbrace ls(l,m), s(l,m)+ls(m',r) \rbrace$          |
+| $rs(l,r)=\max_{l \leq a \leq r} S(a,r)$       | $rs(l,r)=\max\lbrace rs(m',r), s(m',r)+ls(l,m) \rbrace$         |
+| $ms(l,r)=\max_{l\leq a \leq b \leq r} S(a,b)$ | $ms(l,r)=\max\lbrace ms(l,m),ms(m',r),rs(l,m)+ls(m',r) \rbrace$ |
 
 Same as other segment trees, single element update can be done in $O(\log n)$, and the maximum interval sum is just $ms(1,n)$ which can be read in $O(1)$. Finding the minimum interval sum is very similar, but the easiest way (requires least coding) is to instantiate another identical segment tree, just with all data negated.
 

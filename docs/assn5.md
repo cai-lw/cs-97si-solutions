@@ -51,4 +51,6 @@ Each TP corresponds to a step in Euclid's greatest common divisor (GCD) algorith
 
 ## 3317 Stake Your Claim (7) 
 
+(Solved)
+
 ## 1740 A New Stone Game (7) 
