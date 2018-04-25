@@ -65,3 +65,7 @@ The largest $P(u)$ among all nodes is the length of the longest paths in the who
 Find and shrink strongly connected components (SCCs). If the remaining graph is connected and has exactly one node that has no outward edge, every node in the correspoinding SCC in the original graph is reachable from all nodes. In all other cases, the answer is zero.
 
 ## 1944 Fiber Communications (8, challenge problem)
+
+First, consider the linear version (where node $1$ and node $n$ are not connected, in contrast to circular) of this problem. For each connected component, its nodes are connected only if its leftmost and rightmost nodes are connected, which requires all nodes between them to be connected. Therefore, the solution is the union of the *range* (the interval between the leftmost node and the rightmost node) of all connected components. This can be solved in $O(n)$ if intervals are sorted.
+
+For the original circular problem, notice that we only need at most $n-1$ connections, so we can always cut the circle open somewhere and transform the problem into the linear version. If we try all $n$ places to cut the circle, the smallest answer among these $n$ linear problems will also be the answer of the original problem. In each iteration, we move the cutting place by only one step, so each iteration affects at most one interval, and it's easy to maintain the sortedness of intervals without sorting them again. The overall complexity is $O(n^2)$.

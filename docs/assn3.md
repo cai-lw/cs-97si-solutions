@@ -62,6 +62,10 @@ Do a DFS to find the traversal sequence, as well as the interval for each subtre
 
 ## 1175 Picture (7, challenge problem) 
 
+We use the mimimal representation method to compare clusters. Different variations of the same cluster should have same representations, and two clusters are the same if an only if their representations are the same. We treat a cluster as a sorted sequence of points, and consider its all 8 variations. The lexicographically smallest sequence among those 8 variations will be the representation of the cluster.
+
+Using a hash table to store clusters, we can find all distinct clusters in $O(wh)$. But this problem has rather small input, so the hash table is not necessary, since doing $O(numDifferentClusters)$ comparisons for each cluster to find its equivalent clusters is acceptable. The complexity will be $O(numClusters\times numDifferentClusters\times starPerCluster)$ without the hash table.
+
 ## 1195 Mobile phones (8, challenge problem)
 
 (Same as [Leetcode 302: Range Sum Query 2D - Mutable](https://leetcode.com/problems/range-sum-query-2d-mutable), subscribers only)
