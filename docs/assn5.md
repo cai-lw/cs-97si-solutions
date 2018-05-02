@@ -19,11 +19,11 @@ For $N\leq 4$, it turns out that Alice can only win when $N\leq 2$.
 
 ## 2505 A multiplication game (3) 
 
-Simply do a DP on all reachable numbers from the largest down to 1, to find whether each number is a winning state or a losing state. The number of reachable numbers is 6623, so this is fast enough.
+Simply do a DP (or equivalently, memoized minimax search) on all reachable numbers from the largest down to 1, to find whether each number is a winning state or a losing state. The number of reachable numbers is 6623, so this is fast enough.
 
 ## 1678 I Love this Game! (3) 
 
-(Solved)
+Do a DP or memoized search just like the problem above. Complexity is $O(N(b-a))$.
 
 ## 1704 Georgia and Bob (5) 
 
@@ -47,10 +47,10 @@ Each TP corresponds to a step in Euclid's greatest common divisor (GCD) algorith
 
 ## 1143 Number Game (7)
 
-(Solved)
+Good old minimax search. Number of states is $2^{19}$ which is a little large and requires efficient implementation based on bit operations.
 
 ## 3317 Stake Your Claim (7) 
 
-(Solved)
+Yet another minimax search. There aren't many states, but evaluating final states is costly, so also take care of the implementation.
 
 ## 1740 A New Stone Game (7) 

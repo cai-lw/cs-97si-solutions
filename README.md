@@ -22,7 +22,7 @@ Despite being an English site, the vast majority of POJ's users are from China. 
 
 The goal of this repo is to provide POJ solutions and analyses **in English**, which will be either my own work or translation from Chinese blog posts. Because I use POJ solely for CS 97SI, I am currently only planning to write solution for **problems listed in CS 97SI**.
 
-I also upload my own solution codes to this repo, but don't expect high-quality or well-documented code here, as they are just for the purpose of passing the judge system. Also, I cannot solve every problem on the CS 97SI list. Difficulty 6 or 7 is the best I can do.
+I also upload my own solution codes to this repo, but don't expect high-quality or well-documented code here, as they are just for the purpose of passing the judge system. Also, I cannot solve every problem on the CS 97SI list due to my limited ability.
 
 ## Contribution
 
