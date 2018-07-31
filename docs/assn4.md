@@ -47,4 +47,6 @@ Covered in lecture slides.
 
 (Solved)
 
-## 1038 Bugs Integrated, Inc. (9, challenge problem) 
+## 1038 Bugs Integrated, Inc. (9, challenge problem)
+
+(Solved)
