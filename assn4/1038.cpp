@@ -2,7 +2,7 @@
 #include <algorithm>
 using namespace std;
 
-const int N_STATE=201,INF=1000000000;
+const int N_STATE=201;
 int n,m,k,plate[151],ns,s2i[1024],i2s[N_STATE],dp[N_STATE][N_STATE],dp2[N_STATE][N_STATE];
 
 void predfs(int a,int i){
@@ -48,13 +48,13 @@ int main(){
         fill(s2i,s2i+(1<<m),-1);
         fill(i2s,i2s+N_STATE,-1);
         predfs(0,0);
-        for(int i=0;i<ns;i++)fill(dp[i],dp[i]+ns,-INF);
+        for(int i=0;i<ns;i++)fill(dp[i],dp[i]+ns,-1);
         dp[0][0]=0;
         for(r=2;r<n;r++){
-            for(int i=0;i<ns;i++)fill(dp2[i],dp2[i]+ns,-INF);
+            for(int i=0;i<ns;i++)fill(dp2[i],dp2[i]+ns,-1);
             for(int i=0;i<ns;i++)
                 for(int j=0;j<ns;j++){
-                    if((i2s[i]&plate[r-2])||(i2s[j]&plate[r-1]))continue;
+                    if(dp[i][j]<0)continue;
                     i0=i;
                     j0=j;
                     dfs(i2s[i]|plate[r-2],i2s[j]|plate[r-1],plate[r],0,0);
