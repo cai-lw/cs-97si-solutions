@@ -13,7 +13,7 @@ title: List of Solutions and Codes
 | [Assignment 4: Dynamic Programming (DP)](assn4) | 10/12     | [assn4](https://github.com/cai-lw/cs-97si-solutions/tree/master/assn4)   | 10/12     |
 | [Assignment 5: Combinatorial Games](assn5)      | 8/12      | [assn5](https://github.com/cai-lw/cs-97si-solutions/tree/master/assn5)   | 8/12      |
 | [Assignment 6: Basic Graph Algorithms](assn6)   | 10/12     | [assn6](https://github.com/cai-lw/cs-97si-solutions/tree/master/assn6)   | 10/12     |
-| [Assignment 7: Shortest Path Algorithms](assn7) | 6/12      | [assn7](https://github.com/cai-lw/cs-97si-solutions/tree/master/assn7)   | 10/12     |
+| [Assignment 7: Shortest Path Algorithms](assn7) | 10/12     | [assn7](https://github.com/cai-lw/cs-97si-solutions/tree/master/assn7)   | 10/12     |
 | [Assignment 8: Network Flow Problems](assn8)    | **12/12** | [assn8](https://github.com/cai-lw/cs-97si-solutions/tree/master/assn8)   | **12/12** |
 | [Assignment 9: Computational Geometry](assn9)   | 0/12      | [assn9](https://github.com/cai-lw/cs-97si-solutions/tree/master/assn9)   | 10/12     |
 | [Assignment 10: String Algorithms](assn10)      | 3/12      | [assn10](https://github.com/cai-lw/cs-97si-solutions/tree/master/assn10) | 9/12      |

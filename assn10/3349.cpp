@@ -2,62 +2,42 @@
 #include <algorithm>
 using namespace std;
 
-bool le(int *a, int *b) {
+typedef long long ll;
+const int P=1048573;
+
+ll snowflake_hash(int *a) {
+    int h1 = 0, h2 = 0;
     for(int i = 0; i < 6; i++) {
-        if(a[i] < b[i]) return true;
-        if(a[i] > b[i]) return false;
+        h1 = (h1 * 233 + a[i]) % P;
+        h2 = (h2 * 149 + a[i]) % P;
     }
-    return false;
-}
-
-bool eq(int *a, int *b) {
-    for(int i = 0; i < 6; i++)
-        if(a[i] != b[i]) return false;
-    return true;
-}
-
-void snowflake(int *a) {
-    int m[6];
-    copy(a, a+6, m);
-    for(int i = 1; i < 6; i++) {
-        for(int j = 0; j < 5; j++)swap(a[j],a[j+1]);
-        if(le(a, m))copy(a, a+6, m);
+    ll ret = 0;
+    for(int i = 0; i < 6; i++) {
+        ret ^= (ll(h1) << 20) | h2;
+        // 475045=(233^6)%P 439173=(149^6)%P
+        h1 = (h1 * 233 + int(ll(P + 1 - 475045) * a[i] % P)) % P;
+        h2 = (h2 * 149 + int(ll(P + 1 - 439173) * a[i] % P)) % P;
     }
-    for(int i = 0; i < 3; i++)swap(a[i], a[5-i]);
-    if(le(a, m))copy(a, a+6, m);
-    for(int i = 0; i < 5; i++) {
-        for(int j = 0; j < 5; j++)swap(a[j],a[j+1]);
-        if(le(a, m))copy(a, a+6, m);
-    }
-    copy(m, m+6, a);
-}
-
-int snowflake_hash(int *a) {
-    int ret = 0;
-    for(int i = 0; i < 6; i++) ret = (ret * 131 + a[i]) % 1048576;
     return ret;
 }
 
-int hashmap[1048576][10];
-int s[600000];
+ll h[100000];
 
 int main() {
-    for(int i = 0; i < 1048576; i++)
-        for(int j = 0; j < 10; j++) hashmap[i][j] = -1;
     int n;
     scanf("%d", &n);
     for(int i = 0; i < n; i++){
-        for(int j = 0; j < 6; j++)scanf("%d", &s[i*6+j]);
-        snowflake(s+i*6);
-        int h = snowflake_hash(s+i*6);
-        int pt;
-        for(pt = 0; hashmap[h][pt] != -1; pt++){;
-            if(eq(s+i*6, s+hashmap[h][pt]*6)){
-                printf("Twin snowflakes found.\n");
-                return 0;
-            }
-        }
-        hashmap[h][pt] = i;
+        int sf[6];
+        scanf("%d%d%d%d%d%d", sf, sf+1, sf+2, sf+3, sf+4, sf+5);
+        h[i] = snowflake_hash(sf);
+        reverse(sf, sf + 6);
+        h[i] ^= snowflake_hash(sf);
     }
+    sort(h, h + n);
+    for(int i = 0; i < n - 1; i++)
+        if(h[i] == h[i+1]) {
+            printf("Twin snowflakes found.\n");
+            return 0;
+        }
     printf("No two snowflakes are alike.\n");
 }

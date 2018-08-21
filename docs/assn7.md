@@ -47,20 +47,31 @@ We first split evey undirected edge into two directed edges. This is okay becaus
 
 ## 1556 The Doors (5)
 
-(Solved)
+It is obvious that a shortest path changes direction only when it hits an obstacle. So we only need to consider sides of doors as vertices -- the shortest path must be straight line segments among them. Connect each pair of mutually visible vertices (which means nothing blocks the straight line between them) and find the shortest path. To check visibility, just naively loop through all pairs of vertices and all walls, which is $O(n^3)$.
 
 ## 2502 Subway (6)
 
-(Solved)
+Connect adjacant subway stations with length of travel time at subway speed, and connect all other pairs of points with length of travel time at walking speed, then find the shortest path.
 
 ## 1344 Tree Size Problem (6)
 
 ## 3463 Sightseeing (6)
 
-(Solved)
+The paths we are counting can only go through shortest edges (edge $(u,v)$ that $w(u,v)=d(u)-d(v)$) except going through shortest-plus-one edges ($w(u,v)=d(u)-d(v)+1$) no more than once. Since $d(u)$ are always non-decreasing along such paths, we can count them efficiently using DP. Let $dp(u,k)$ denote number of shortest or shortest-plus-one paths ending at $u$ that have gone through shortest-plus-one edges $k$ times ($k=0,1$). Then
+
+$$
+dp(u,0)=\sum_{w(u,v)=d(u)-d(v)}dp(v,0)\\
+dp(u,1)=\sum_{w(u,v)=d(u)-d(v)}dp(v,1)+\sum_{w(u,v)=d(u)-d(v)+1}dp(v,0)
+$$
+
+We can compute the $k=0$ part along with the Dijkstra algorithm, and then compute the $k=1$ in the order of increasing $d(u)$.
 
 ## 2135 Farm Tour (7)
 
 ## 2404 Jogging Trails (9, challenge problem)
 
-(Solved)
+We know that an Eulerian tour exists iff all nodes have even degree. If it is not true for our graph, we have to duplicate some edges. A Eulerian tour is shortest iff it has the smallest total length of duplicated edges, because all other edges (that is, all edges in the original graph) are traveled exactly once, and their total length is constant.
+
+Let's eliminate one pair of odd nodes at a time, by duplicating all edges on the shortest path between them. If we try all arrangements for elimination (that is, try all ways of pairing up odd nodes), we can always find the optimal answer among them. That's because an optimal set of duplicated edges doesn't contain cycle, so it can always be decomposed into paths where no two paths share end nodes (choose two leaf nodes, remove all edges on paths between them, repeat), and all these paths must be shortest, so the optimal configuration is certainly visited by our searching process.
+
+The number of such arrangements is $\frac{(2k)!}{k!2^k}$, where $k$ is half the number of odd nodes and $k\leq\lfloor n/2 \rfloor$. For $n\leq15$ this number is at most 135135, so exhaustive search methods can easily fit into the time limit.
