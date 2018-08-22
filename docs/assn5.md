@@ -15,7 +15,9 @@ For $N\geq 5$, after Alice's first move, the remaining coins form a sequence. Th
 
 For $N\leq 4$, it turns out that Alice can only win when $N\leq 2$.
 
-## 3480 John (3) 
+## 3480 John (3)
+
+This type of game, where the one cannot move wins, is called misere game. There are no generic solutions to misere games similar to Grundy's theorem, and each specific type of game have to be handled specifically. However, misere Nim's game is particularly simple - the answer is identical to the normal game, except when all numbers are 1. See the [Wikipedia article](https://en.wikipedia.org/wiki/Nim#Winning_positions) for details.
 
 ## 2505 A multiplication game (3) 
 
