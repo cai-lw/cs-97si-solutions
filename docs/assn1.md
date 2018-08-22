@@ -49,4 +49,6 @@ Based on the observation, we only need to find the earliest arriving person who 
 
 ## 3251 Big Square (6, challenge problem)
 
+With careful implementation, $O(n^4)$ brute force can pass. We can show that there are $1\times 99^2+2\times 98^2+\dots+99\times 1^2\approx 8.3\times 10^6$ possible squares in the $100\times 100$ grid, which are reasonable to be enumerated within 2 seconds. Try not to enumerate out-of-range squares (limit the range of indexes correctly) or enumerate each square more than once (for example, only enumerate the upper-left edge).
+
 ## 1403 Hotline (9, challenge problem)

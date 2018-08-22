@@ -60,8 +60,10 @@ Connect adjacant subway stations with length of travel time at subway speed, and
 The paths we are counting can only go through shortest edges (edge $(u,v)$ that $w(u,v)=d(u)-d(v)$) except going through shortest-plus-one edges ($w(u,v)=d(u)-d(v)+1$) no more than once. Since $d(u)$ are always non-decreasing along such paths, we can count them efficiently using DP. Let $dp(u,k)$ denote number of shortest or shortest-plus-one paths ending at $u$ that have gone through shortest-plus-one edges $k$ times ($k=0,1$). Then
 
 $$
-dp(u,0)=\sum_{w(u,v)=d(u)-d(v)}dp(v,0)\\
-dp(u,1)=\sum_{w(u,v)=d(u)-d(v)}dp(v,1)+\sum_{w(u,v)=d(u)-d(v)+1}dp(v,0)
+\begin{align}
+dp(u,0)&=\sum_{w(u,v)=d(u)-d(v)}dp(v,0)\\
+dp(u,1)&=\sum_{w(u,v)=d(u)-d(v)}dp(v,1)+\sum_{w(u,v)=d(u)-d(v)+1}dp(v,0)
+\end{align}
 $$
 
 We can compute the $k=0$ part along with the Dijkstra algorithm, and then compute the $k=1$ in the order of increasing $d(u)$.

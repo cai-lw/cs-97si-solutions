@@ -7,7 +7,7 @@ title: List of Solutions and Codes
 
 | Solution                                        | Progress  | Code                                                                     | Progress  |
 | ----------------------------------------------- | --------- | ------------------------------------------------------------------------ | --------- |
-| [Assignment 1: Coding Exercise](assn1)          | 10/12     | [assn1](https://github.com/cai-lw/cs-97si-solutions/tree/master/assn1)   | 10/12     |
+| [Assignment 1: Coding Exercise](assn1)          | 11/12     | [assn1](https://github.com/cai-lw/cs-97si-solutions/tree/master/assn1)   | 11/12     |
 | [Assignment 2: Mathematics](assn2)              | 11/12     | [assn2](https://github.com/cai-lw/cs-97si-solutions/tree/master/assn2)   | 11/12     |
 | [Assignment 3: Data Structures](assn3)          | 11/12     | [assn3](https://github.com/cai-lw/cs-97si-solutions/tree/master/assn3)   | 11/12     |
 | [Assignment 4: Dynamic Programming (DP)](assn4) | 10/12     | [assn4](https://github.com/cai-lw/cs-97si-solutions/tree/master/assn4)   | 10/12     |
