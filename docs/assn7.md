@@ -27,9 +27,9 @@ Since "the cows are standing in the same order as they are numbered" (read probl
 
 ## 2253 Frogger (4)
 
-A simple $O(m\log m)$ solution is to add edges in increasing order of length, until the start point and the end point connects. This is fast enough, but there is faster solution.
+A simple $O(m\log m)$ solution is to add edges in increasing order of length, until the start point and the end point connects. This is fast enough, but the complexity can actually be even lower.
 
-Run a Dijkstra's algorithm with update rule changed to $d(u)\leftarrow\min\lbrace d(u),\max\lbrace d(v),w(u,v)\rbrace\rbrace$. We can prove that $d(v)$ is the minimum length of longest edge on paths to $u$, in the same way we prove the correctness of original Dijkstra's algorithm. This method has the same complexity as the original Dijkstra's algorithm, which can be as good as $O(m+n\log n)$.
+Run a Dijkstra's algorithm with update rule changed to $d(u)\leftarrow\min\lbrace d(u),\max\lbrace d(v),w(u,v)\rbrace\rbrace$. We can prove that $d(v)$ is the minimum length of longest edge on paths to $u$, in the same way we prove the correctness of original Dijkstra's algorithm. This method has the same complexity as the original Dijkstra's algorithm, which can theoretically be $O(m+n\log n)$.
 
 ## 3255 Roadblocks (5)
 
@@ -69,6 +69,10 @@ $$
 We can compute the $k=0$ part along with the Dijkstra algorithm, and then compute the $k=1$ in the order of increasing $d(u)$.
 
 ## 2135 Farm Tour (7)
+
+This is equivalent to finding a minimum cost flow whose flow amount is 2. Every edge has capacity 1 and cost equal to its length. Solution is just the standard algorithm for minimum cost flow: find the shortest path, reverse and negate all edges on that path, then find the shortest path again. Complexity is $O(M\logM)$.
+
+I am not aware of any interpretation of this problem that doesn't involve network flow.
 
 ## 2404 Jogging Trails (9, challenge problem)
 

@@ -58,7 +58,11 @@ $$
 
 The largest $P(u)$ among all nodes is the length of the longest paths in the whole tree.
 
-## 2337 Catenyms (7) 
+## 2337 Catenyms (7)
+
+Construct a graph whose nodes are 26 letters, and each word is an edge pointing from its first letter to its last letter. We are asked to find the lexicographically smallest Eulerian trail on this graph.
+
+Recall that for a directed graph to be Eulerian, besides degree criteria, the graph must also be *weakly connected* (that is, the graph is connected if we make all edges undirected). The answer can be obtained by travelling on the graph and greedily taking the lexicographically smallest edge that is not a bridge (otherwise removing it makes the graph disconnected). Because we have to re-run the bridge finding algorithm for every step, the complexity is $O(n^2)$.
 
 ## 2186 Popular Cows (8, challenge problem) 
 

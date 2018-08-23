@@ -49,4 +49,6 @@ title: "Assignment 9: Computational Geometry"
 
 ## 3246 Game (9, challenge problem)
 
+(Solved)
+
 ## 3266 Cow School (10, challenge problem)
