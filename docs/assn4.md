@@ -35,7 +35,9 @@ Covered in lecture slides.
 
 The one-dimensional version of the problem can be easily solved in $O(N)$. For the original two-dimensional problem, go through all possible upper and lower boundaries. For each case, combine all rows between boundaries into a single row, then solve the one-dimensional problem. The overall complexity is $O(N^3)$.
 
-## 2127 Greatest Common Increasing Subsequence (6) 
+## 2127 Greatest Common Increasing Subsequence (6)
+
+This is a pretty classical problem. The optimal solution is $O(N^2)$. See this [GeeksforGeeks article](https://www.geeksforgeeks.org/longest-common-increasing-subsequence-lcs-lis/) for the description of a $O(N^2)$ solution. However, the time limit of this question is (deliberately?) loose, so that carefully implemented $O(N^3)$ solution can also fit in.
 
 ## 1655 Balancing Act (6) 
 

@@ -70,7 +70,7 @@ We can compute the $k=0$ part along with the Dijkstra algorithm, and then comput
 
 ## 2135 Farm Tour (7)
 
-This is equivalent to finding a minimum cost flow whose flow amount is 2. Every edge has capacity 1 and cost equal to its length. Solution is just the standard algorithm for minimum cost flow: find the shortest path, reverse and negate all edges on that path, then find the shortest path again. Complexity is $O(M\logM)$.
+This is equivalent to finding a minimum cost flow whose flow amount is 2. Every edge has capacity 1 and cost equal to its length. Solution is just the standard algorithm for minimum cost flow: find the shortest path, reverse and negate all edges on that path, then find the shortest path again. Complexity is $O(M\log M)$.
 
 I am not aware of any interpretation of this problem that doesn't involve network flow.
 
