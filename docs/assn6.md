@@ -60,9 +60,13 @@ The largest $P(u)$ among all nodes is the length of the longest paths in the who
 
 ## 2337 Catenyms (7)
 
+(Very similar to [Leetcode 332: Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/description/))
+
 Construct a graph whose nodes are 26 letters, and each word is an edge pointing from its first letter to its last letter. We are asked to find the lexicographically smallest Eulerian trail on this graph.
 
 Recall that for a directed graph to be Eulerian, besides degree criteria, the graph must also be *weakly connected* (that is, the graph is connected if we make all edges undirected). The answer can be obtained by travelling on the graph and greedily taking the lexicographically smallest edge that is not a bridge (otherwise removing it makes the graph disconnected). Because we have to re-run the bridge finding algorithm for every step, the complexity is $O(n^2)$.
+
+**Update**: Found an simple $O(n)$ algorithm (ignoring the time for sorting) in [this Leetcode discussion post](https://leetcode.com/problems/reconstruct-itinerary/discuss/78768/Short-Ruby-Python-Java-C++). Code has been rewritten using this algorithm.
 
 ## 2186 Popular Cows (8, challenge problem) 
 

@@ -3,52 +3,36 @@
 #include <algorithm>
 using namespace std;
 
-char *words[1000],last[1000];
-int a[26][26],dfn[26],low[26],par[26],din[26],dout[26],idf;
-bool used[1000];
+char *edg[26][1000],*ans[1000];
+int n,ians,din[26],dout[26];
 
 void dfs(int u){
-    dfn[u]=idf++;
-    low[u]=dfn[u];
-    for(int v=0;v<26;v++)
-        if((a[u][v]||a[v][u])&&par[u]!=v){
-            if(dfn[v]>=0)low[u]=min(low[u],dfn[v]);
-            else{
-                par[v]=u;
-                dfs(v);
-                low[u]=min(low[u],low[v]);
-            }
-        }
-}
-
-void do_dfs(int root){
-    fill(dfn,dfn+26,-1);
-    fill(par,par+26,-1);
-    dfs(root);
+    while(dout[u]>0){
+        char *s=edg[u][dout[u]-1];
+        int v=s[strlen(s)-1]-'a';
+        dout[u]--;
+        dfs(v);
+        ans[--ians]=s;
+    }
 }
 
 bool strcmpb(const char *a,const char *b){
-    return strcmp(a,b)<0;
+    return strcmp(a,b)>0;
 }
 
 void solve(){
-    for(int i=0;i<26;i++)fill(a[i],a[i]+26,0);
     fill(din,din+26,0);
     fill(dout,dout+26,0);
-    int n;
     scanf("%d",&n);
-    fill(used,used+n,false);
+    fill(ans,ans+n,(char*)0);
     for(int i=0;i<n;i++){
         char *s=new char[21];
         scanf("%s",s);
-        char fst=s[0],lst=s[strlen(s)-1];
-        a[fst-'a'][lst-'a']++;
-        dout[fst-'a']++;
-        din[lst-'a']++;
-        words[i]=s;
+        int fst=s[0]-'a',lst=s[strlen(s)-1]-'a';
+        edg[fst][dout[fst]]=s;
+        dout[fst]++;
+        din[lst]++;
     }
-    sort(words,words+n,strcmpb);
-    for(int i=0;i<n;i++)last[i]=words[i][strlen(words[i])-1];
     int cur=-1;
     for(int i=0;i<26;i++){
         int d=dout[i]-din[i];
@@ -64,34 +48,27 @@ void solve(){
             }
         }
     }
-    if(cur==-1){
-        a[words[0][0]-'a'][last[0]-'a']--;
-        used[0]=true;
-        dout[words[0][0]-'a']--;
-        din[last[0]-'a']--;
-        cur=last[0]-'a';
-    }
-    do_dfs(cur);
     for(int i=0;i<26;i++)
-        if((din[i]||dout[i])&&dfn[i]==-1){
+        sort(edg[i],edg[i]+dout[i],strcmpb);
+    if(cur==-1)
+        for(int i=0;i<26;i++)
+            if(dout[i]>0){
+                char *s=edg[i][dout[i]-1];
+                ans[0]=s;
+                cur=s[strlen(s)-1]-'a';
+                dout[i]--;
+                break;
+            }
+    ians=n;
+    dfs(cur);
+    for(int i=0;i<n;i++)
+        if(!ans[i]){
             printf("***\n");
             return;
         }
-    if(used[0])printf("%s.",words[0]);
-    for(int out=used[0];out<n;out++){
-        do_dfs(cur);
-        for(int i=0;i<n;i++){
-            if(used[i]||words[i][0]-'a'!=cur)continue;
-            int nxt=last[i]-'a';
-            if(dout[cur]>1&&a[cur][nxt]+a[nxt][cur]==1&&cur!=nxt&&(par[nxt]==cur?dfn[cur]<low[nxt]:dfn[nxt]<low[cur]))continue;
-            a[cur][nxt]--;
-            dout[cur]--;
-            din[nxt]--;
-            used[i]=true;
-            printf(out==n-1?"%s\n":"%s.",words[i]);
-            cur=nxt;
-            break;
-        }
+    for(int i=0;i<n;i++){
+        printf("%s",ans[i]);
+        putchar(i==n-1?'\n':'.');
     }
 }
 
