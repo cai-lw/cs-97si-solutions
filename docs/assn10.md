@@ -49,6 +49,10 @@ This is very simlar to 1961, except that repeating partterns may not start from 
 
 ## 2185 Milking Grid (7)
 
+Let's first consider the one-dimensional version. A string `S` has period `T` if and only if `S[0..N-T-1]==S[T..N-1]`, so its smallest period corresponds to its longest prefix-suffix, which can be found by KMP in $O(N)$.
+
+For the original two-dimensional problem, the answer is just the product of the smallest row period and the smallest column period.
+
 ## 3349 Snowflake Snow Snowflakes (7)
 
 We need a string hash function that is invariant upon rotating or reversing. Simply adding or xor-ing all numbers (or after applying a single-variable function) together is a bad idea, since all permutations will have the same hash.
